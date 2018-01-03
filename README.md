@@ -1,8 +1,7 @@
 JomWhatsapp
 ===================
 
-This project was generated with Angular CLI version 1.6.1.
-
+Build using MEAN stack.
 Currently running at http://145.239.86.102:4100/
 
 Yet to be implemented
@@ -12,11 +11,5 @@ Yet to be implemented
 		2. User registration and login.
 		3. Validating phone number so that only valid Malaysia number (+60) can be used.
 		4. Navbar
-
-Tech used
-------------
-
-	1. Node.js
-	2. Express.js
-	3. MongoDB
-	4. Angular 4
+    5. Change input for pretext to <textarea> instead of <input type="text"/> .
+    6. Automatically convert added pretext from plain text to url encoded text.
