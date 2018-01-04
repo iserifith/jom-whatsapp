@@ -8,7 +8,7 @@ import { MobileService } from '../../services/mobile.service';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private _itemService: MobileService) { }
+  constructor(private _mobileService: MobileService) { }
 
   data: any;
   mobile_number: String;
@@ -21,13 +21,20 @@ export class DashboardComponent implements OnInit {
   }
 
   getAllMobile(){
-    this._itemService.getAllData().subscribe(data => {
+    this._mobileService.getAllData().subscribe(data => {
       this.data = data;
     });
   }
 
   goToLink(data: any){
     window.location.href = 'https://api.whatsapp.com/send?phone=' + data.mobile_number + '&text=' + data.pre_text;
+  }
+
+  deleteData(data: any, index){
+    this._mobileService.deleteData(data);
+    this.data.splice(index, 1);
+    console.log(index, 1);
+    // console.log(data);
   }
 
 }

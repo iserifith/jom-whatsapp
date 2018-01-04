@@ -12,7 +12,7 @@ export class AddDataComponent implements OnInit {
   mobile_number: String;
   pre_text: String;
 
-  constructor(private _mobileService: MobileService) { }
+  constructor(private _mobileService: MobileService, private _router: Router) { }
 
   ngOnInit() {
   }
@@ -24,6 +24,8 @@ export class AddDataComponent implements OnInit {
     }
 
     this._mobileService.addData(data);
+    this._router.navigate(['']);
+
   }
 
 }

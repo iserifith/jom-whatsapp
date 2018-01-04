@@ -1,12 +1,12 @@
-<div class="col">
+<div class="col addform">
   <form (submit)="onSubmit()">
     <div class="form-group">
       <label>Phone Number</label>
-      <input type="text" [(ngModel)]="mobile_number" name="mobile_number" class="form-control" />
+      <input type="text" [(ngModel)]="mobile_number" name="mobile_number" class="form-control" placeholder="60133333333" />
     </div>
     <div class="form-group">
       <label>Pre Text</label>
-      <input type="text" [(ngModel)]="pre_text" name="pre_text" class="form-control" />
+      <textarea cols="5" rows="10" name="pre_text" [(ngModel)]="pre_text" class="form-control" ></textarea>
     </div>
     <input type="submit" class="btn btn-primary" value="submit">
   </form>

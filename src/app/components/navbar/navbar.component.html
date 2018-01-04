@@ -1,3 +1,26 @@
-<p>
-  navbar works!
-</p>
+<nav class="navbar navbar-expand-md fixed-top navbar-light bg-light">
+  <a class="navbar-brand" [routerLink]="['/']">Jom Whatsapp</a>
+
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+
+    </ul>
+    <ul class="navbar-nav float-right">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/']">
+          My Links
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/']">LOGIN</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/']">REGISTER</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/']">LOG OUT</a>
+      </li>
+    </ul>
+
+  </div>
+</nav>

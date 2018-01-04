@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const urlencode = require('urlencode');
+const passport = require('passport');
 
 
 mongoose.Promise = global.Promise;
@@ -19,6 +20,12 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({'extended':'false'}));
 
+// passport Middleware
+app.use(passport.initialize());
+app.use(passport.session());
+require('./passport')(passport);
+
+
 // Cors
 app.use(cors());
 // Output folder for our angular project. I think.
@@ -30,7 +37,9 @@ app.get('/', (req, res) => {
 	res.send('Invalid Endpoint');
 });
 
-const mobile = require('./routes/mobile')
+const mobile = require('./routes/mobile');
+const users = require('./routes/users');
+app.use('/api/users', users);
 app.use('/api/mobile', mobile);
 
 // Port
