@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 const passport = require('passport');
 const jwt = require('jsonwebtoken');
-const Users = require('../models/Users');
+const User = require('../models/Users');
+const bcrypt = require('bcryptjs');
 
 secret = 'ayam';
 
@@ -32,7 +33,7 @@ router.post('/register', (req, res, next) => {
 });
 
 // Authenticate
-router.post('/Authenticate', (req, res, next) => {
+router.post('/authenticate', (req, res, next) => {
 	const username = req.body.username;
 	const password = req.body.password;
 

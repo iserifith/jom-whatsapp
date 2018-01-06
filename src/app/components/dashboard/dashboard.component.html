@@ -3,7 +3,6 @@
     <thead>
       <tr>
         <th>#</th>
-        <th>URL</th>
         <th>Mobile Number</th>
         <th>Actions</th>
       </tr>
@@ -11,7 +10,6 @@
     <tbody>
       <tr *ngFor="let data of data; let i = index">
         <td>{{ i + 1 }}</td>
-        <td>https://hi.jomwasap.my/cl0h51515071473</td>
         <td>{{ data.mobile_number }}</td>
         <td>
           <button type="button" class="btn btn-outline-primary btn-sm" (click)="goToLink(data)">Go</button>
