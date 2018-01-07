@@ -20,11 +20,12 @@ export class AddDataComponent implements OnInit {
   onSubmit(){
     const data = {
       mobile_number: this.mobile_number,
-      pre_text: this.pre_text
+      pre_text: this.pre_text,
+      username: localStorage.getItem('username')
     }
 
     this._mobileService.addData(data);
-    this._router.navigate(['']);
+    this._router.navigate(['/dashboard']);
 
   }
 

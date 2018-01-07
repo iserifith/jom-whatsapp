@@ -46,7 +46,6 @@ export class LoginComponent implements OnInit {
 					pauseOnHover: false,
 					clickToClose: true,
         });
-        // this._router.navigate(['login']);
       }
     });
   }

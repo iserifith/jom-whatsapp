@@ -17,12 +17,21 @@ export class DashboardComponent implements OnInit {
 
 
   ngOnInit() {
-    this.getAllMobile();
+    this.getData();
   }
 
-  getAllMobile(){
-    this._mobileService.getAllData().subscribe(data => {
-      this.data = data;
+  // getAllMobile(){
+  //   this._mobileService.getAllData().subscribe(data => {
+  //     this.data = data;
+  //   });
+  // }
+
+  getData(){
+    this._mobileService.getData().then((res) => {
+      this.data = res;
+      console.log(this.data);
+    }, (err) => {
+      console.log(err);
     });
   }
 

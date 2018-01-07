@@ -6,19 +6,19 @@
 
     </ul>
     <ul class="navbar-nav float-right">
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/']">
+      <li class="nav-item" [routerLinkActive]="['active']">
+        <a class="nav-link" [routerLink]="['/dashboard']">
           My Links
         </a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" [routerLinkActive]="['active']">
         <a class="nav-link" [routerLink]="['/login']">LOGIN</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" [routerLinkActive]="['active']">
         <a class="nav-link" [routerLink]="['/register']">REGISTER</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" [routerLink]="['/']">LOG OUT</a>
+      <li class="nav-item" [routerLinkActive]="['active']">
+        <a class="nav-link"  (click)="onLogoutClick()" href="#">LOGOUT</a>
       </li>
     </ul>
 

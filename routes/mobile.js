@@ -12,13 +12,22 @@ router.get('/', function(req, res, next){
 });
 
 // Get mobile no with id
+// router.get('/:id', function(req, res, next){
+//   Mobile.findById(req.params.id, function(err, data){
+//     if (err) return next(err);
+//     res.json(data);
+//   });
+// });
+
+// Get mobile with username
 router.get('/:id', function(req, res, next){
-  Mobile.findById(req.params.id, function(err, data){
+
+  // console.log(req.params.username);
+  Mobile.find({username: 'dummy'}, function(err, data){
     if (err) return next(err);
     res.json(data);
   });
 });
-
 // Add new
 router.post('/', function(req, res, next){
   Mobile.create(req.body, function(err, data){
